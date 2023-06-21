@@ -132,7 +132,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20230619112843">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20230621101604">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -390,7 +390,7 @@ data-event-label="high"
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Año&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Año&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[]"
 >
@@ -421,15 +421,73 @@ data-event-label="high"
   <div id="datatables">
 
     
+    <a href="https://sdg.joburg.org.za/data/es/headline/13-2-2.csv" class="btn btn-primary btn-download" download="indicator_13-2-2.csv" tabindex="0" role="button">Descargar los datos de los titulares (.csv)</a>
+    
     <a href="https://sdg.joburg.org.za/data/es/data/13-2-2.csv" class="btn btn-primary btn-download" download='indicator_13-2-2.csv' tabindex='0' role='button'>Descargar datos de origen (.csv)</a>
 
     <p class="no-js-disaggregation-hint">Descargar los datos de origen para los desgloses (.csv)</p>
 
     
-    <h3>No hay datos principales disponibles</h3>
+    <h3>Datos principales</h3>
+    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
+      <caption>Emisiones totales de gases de efecto invernadero por año</caption>
+      <thead>
+        
+        
+        <th scope="col">Year</th>
+        
+        
+        
+        <th scope="col" class="table-value">Value</th>
+        
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td class="table-value">21999263.69</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td class="table-value">23959660.32</td>
+          
+          
+        </tr>
+        
+      </tbody>
+    </table>
     
   </div>
 
+  
+  <div id="datatableFooter">
+    
+    <p>Fuente: COJ Environment Infrastructure Service Department</p>
+    
+    
+    <p>Área geográfica: </p>
+    
+    
+    <p>Unidad de medida: tCO2e</p>
+    
+    
+    <p>Nota: </p>
+    
+  </div>
   
 
 </div>
@@ -531,6 +589,9 @@ data-event-label="Change to Table tab"
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
+        <dt>Fuente:</dt>
+        <dd>COJ Environment Infrastructure Service Department</dd>
+        
 
         
 
@@ -599,6 +660,9 @@ data-event-label="Change to Table tab"
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
+        
+        <dt>Fuente:</dt>
+        <dd>COJ Environment Infrastructure Service Department</dd>
         
 
         
@@ -837,8 +901,19 @@ data-event-label="Change to indicator.sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Definición y conceptos </th>
+        <td>
           
+            <p>As reported in the C40 Greenhouse Gas Emissions Dashboard Data</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -873,7 +948,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Fuentes de datos </th>
         <td>
           
-            <p>COJ Annual GHG Report</p>
+            <p>C40 Greenhouse Gas Emissions Dashboard Data</p>
 
           
         </td>
@@ -935,28 +1010,35 @@ data-event-label="Change to indicator.sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Comentarios y limitaciones </th>
+        <td>
           
-      
-      
-      
-        
+            <p>Data only available for 2014 and 2016</p>
+
           
-      
-      
-      
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Método de cálculo </th>
+        <td>
           
-      
-      
-      
+            <p>An inventory reporting level that covers all BASIC sources, plus scope 1 AFOLU and IPPU, and scope 3 in the Stationary Energy and Transportation sectors.</p>
+
+          
+        </td>
+        </tr>
         
-          
       
-      
-      
-        
-          
+  
       
       
       
@@ -992,10 +1074,46 @@ data-event-label="Change to indicator.sources tab"
       
       
       <tr>
+        <th scope="row">Comparabilidad/desviación de las normas internacionales </th>
+        <td>
+          
+            <p>Original SDG Indicator</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Datos actualizados por última vez </th>
+        <td>
+          
+            Jun 20, 2023
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
         <th scope="row">Metadatos actualizados por última vez </th>
         <td>
           
-            Jun 02, 2023
+            Jun 20, 2023
           
         </td>
         </tr>
@@ -1364,6 +1482,22 @@ data-event-label="Change to indicator.sources tab"
       
       
       
+      
+      <tr>
+        <th scope="row">Organización </th>
+        <td>
+          
+            <p>COJ Environment Infrastructure Service Department</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
         
           
       
@@ -1379,13 +1513,27 @@ data-event-label="Change to indicator.sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Enlace a la fuente de datos </th>
+        <td>
           
-      
-      
-      
-        
+            
+            
+            
+            
+            
+              <a href="https://www.c40knowledgehub.org/s/article/C40-cities-greenhouse-gas-emissions-interactive-dashboard?language=en_US" target="_blank">
+                Link <span class="visuallyhidden">Se abre en una nueva ventana</span>
+              </a>
+            
+
           
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -1566,12 +1714,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/assets/js/sdg.js?v=20230619112843'></script>
+<script src='/assets/js/sdg.js?v=20230621101604'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20230619112843"></script><script>
+    <script src="/assets/js/custom.js?v=20230621101604"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

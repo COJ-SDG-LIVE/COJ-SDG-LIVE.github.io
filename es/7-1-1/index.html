@@ -132,7 +132,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20230619112843">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20230621101604">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -379,7 +379,7 @@ data-event-label="high"
   data-measurementunit="Percentage of households"
   data-xaxislabel=""
   data-showdata="true"
-  data-graphtype="bar"
+  data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
   data-showmap="false"
@@ -447,71 +447,11 @@ data-event-label="high"
         <tr>
           
           
-          <td>2011</td>
-          
-          
-          
-          <td class="table-value">0.250391804</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2012</td>
-          
-          
-          
-          <td class="table-value">0.267195092</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2013</td>
-          
-          
-          
-          <td class="table-value">0.274112804</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2014</td>
-          
-          
-          
-          <td class="table-value">0.284416294</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2015</td>
-          
-          
-          
-          <td class="table-value">0.291266821</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
           <td>2016</td>
           
           
           
-          <td class="table-value">0.312249399</td>
+          <td class="table-value">75.86233432</td>
           
           
         </tr>
@@ -523,7 +463,7 @@ data-event-label="high"
           
           
           
-          <td class="table-value">0.328077505</td>
+          <td class="table-value">74.43886184</td>
           
           
         </tr>
@@ -535,7 +475,7 @@ data-event-label="high"
           
           
           
-          <td class="table-value">0.336584392</td>
+          <td class="table-value">71.26340853</td>
           
           
         </tr>
@@ -547,7 +487,7 @@ data-event-label="high"
           
           
           
-          <td class="table-value">0.349461828</td>
+          <td class="table-value">70.82870007</td>
           
           
         </tr>
@@ -559,7 +499,7 @@ data-event-label="high"
           
           
           
-          <td class="table-value">0.374819414</td>
+          <td class="table-value">77.94865326</td>
           
           
         </tr>
@@ -571,19 +511,7 @@ data-event-label="high"
           
           
           
-          <td class="table-value">0.371525128</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2022</td>
-          
-          
-          
-          <td class="table-value">0.369681224</td>
+          <td class="table-value">77.60518939</td>
           
           
         </tr>
@@ -595,6 +523,8 @@ data-event-label="high"
 
   
   <div id="datatableFooter">
+    
+    <p>Fuente: COJ Group Strategy Policy Coordination and Relations (GSPCR)</p>
     
     
     <p>Área geográfica: </p>
@@ -707,6 +637,9 @@ data-event-label="Change to Table tab"
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
+        <dt>Fuente:</dt>
+        <dd>COJ Group Strategy Policy Coordination and Relations (GSPCR)</dd>
+        
 
         
 
@@ -775,6 +708,9 @@ data-event-label="Change to Table tab"
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
+        
+        <dt>Fuente:</dt>
+        <dd>COJ Group Strategy Policy Coordination and Relations (GSPCR)</dd>
         
 
         
@@ -1060,7 +996,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Fuentes de datos </th>
         <td>
           
-            <p>COJ Circular 88 Report</p>
+            <p>StastSA Metro Development Indicators</p>
 
           
         </td>
@@ -1122,8 +1058,19 @@ data-event-label="Change to indicator.sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Comentarios y limitaciones </th>
+        <td>
           
+            <p>Future COJ Circular 88 Indicator</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -1132,7 +1079,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Método de cálculo </th>
         <td>
           
-            <p>(1) Number of households  having access to electricity / (2) Total number of households within the municipal area) *100</p>
+            <p>(#”EE1.1 (1) Number of households with access to electricity”)/(#”Total number of households in the municipality (estimate)”)*100</p>
 
           
         </td>
@@ -1173,8 +1120,19 @@ data-event-label="Change to indicator.sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Comparabilidad/desviación de las normas internacionales </th>
+        <td>
           
+            <p>Domesticated Indicator</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -1188,7 +1146,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Datos actualizados por última vez </th>
         <td>
           
-            mayo 09, 2023
+            Jun 20, 2023
           
         </td>
         </tr>
@@ -1203,7 +1161,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Metadatos actualizados por última vez </th>
         <td>
           
-            Jun 02, 2023
+            Jun 20, 2023
           
         </td>
         </tr>
@@ -1583,6 +1541,22 @@ data-event-label="Change to indicator.sources tab"
       
       
       
+      
+      <tr>
+        <th scope="row">Organización </th>
+        <td>
+          
+            <p>COJ Group Strategy Policy Coordination and Relations (GSPCR)</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
         
           
       
@@ -1598,13 +1572,27 @@ data-event-label="Change to indicator.sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Enlace a la fuente de datos </th>
+        <td>
           
-      
-      
-      
-        
+            
+            
+            
+            
+            
+              <a href="https://www.statssa.gov.za/publications/P03183/P031832021.pdf" target="_blank">
+                Link <span class="visuallyhidden">Se abre en una nueva ventana</span>
+              </a>
+            
+
           
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -1785,12 +1773,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/assets/js/sdg.js?v=20230619112843'></script>
+<script src='/assets/js/sdg.js?v=20230621101604'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20230619112843"></script><script>
+    <script src="/assets/js/custom.js?v=20230621101604"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

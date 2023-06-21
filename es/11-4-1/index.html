@@ -132,7 +132,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20230619112843">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20230621101604">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -376,10 +376,10 @@ data-event-label="high"
   data-country="City of Johannesburg"
   data-charttitle="Total de gastos per cápita destinados a la preservación, protección y conservación de todo el patrimonio cultural y natural, desglosado por fuente de financiación (pública y privada), tipo de patrimonio (cultural y natural) y nivel de gobierno (nacional, regional y local/municipal)"
   data-charttitles="[]"
-  data-measurementunit=""
+  data-measurementunit="ZAR"
   data-xaxislabel=""
   data-showdata="true"
-  data-graphtype=""
+  data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
   data-showmap="false"
@@ -390,7 +390,7 @@ data-event-label="high"
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Año&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Año&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[]"
 >
@@ -421,15 +421,85 @@ data-event-label="high"
   <div id="datatables">
 
     
+    <a href="https://sdg.joburg.org.za/data/es/headline/11-4-1.csv" class="btn btn-primary btn-download" download="indicator_11-4-1.csv" tabindex="0" role="button">Descargar los datos de los titulares (.csv)</a>
+    
     <a href="https://sdg.joburg.org.za/data/es/data/11-4-1.csv" class="btn btn-primary btn-download" download='indicator_11-4-1.csv' tabindex='0' role='button'>Descargar datos de origen (.csv)</a>
 
     <p class="no-js-disaggregation-hint">Descargar los datos de origen para los desgloses (.csv)</p>
 
     
-    <h3>No hay datos principales disponibles</h3>
+    <h3>Datos principales</h3>
+    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
+      <caption>Total de gastos per cápita destinados a la preservación, protección y conservación de todo el patrimonio cultural y natural, desglosado por fuente de financiación (pública y privada), tipo de patrimonio (cultural y natural) y nivel de gobierno (nacional, regional y local/municipal)</caption>
+      <thead>
+        
+        
+        <th scope="col">Year</th>
+        
+        
+        
+        <th scope="col" class="table-value">Value</th>
+        
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td class="table-value">268315</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td class="table-value">1736357</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td class="table-value">13790131</td>
+          
+          
+        </tr>
+        
+      </tbody>
+    </table>
     
   </div>
 
+  
+  <div id="datatableFooter">
+    
+    <p>Fuente: National Treasury</p>
+    
+    
+    <p>Área geográfica: </p>
+    
+    
+    <p>Unidad de medida: ZAR</p>
+    
+    
+    <p>Nota: </p>
+    
+  </div>
   
 
 </div>
@@ -531,6 +601,9 @@ data-event-label="Change to Table tab"
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
+        <dt>Fuente:</dt>
+        <dd>National Treasury</dd>
+        
 
         
 
@@ -599,6 +672,9 @@ data-event-label="Change to Table tab"
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
+        
+        <dt>Fuente:</dt>
+        <dd>National Treasury</dd>
         
 
         
@@ -837,13 +913,35 @@ data-event-label="Change to indicator.sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Definición y conceptos </th>
+        <td>
           
-      
-      
-      
-        
+            <p>Total actual capital expenditure on cultural assests</p>
+
           
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Unidad de medida </th>
+        <td>
+          
+            <p>ZAR</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -862,7 +960,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Fuentes de datos </th>
         <td>
           
-            <p>COJ Annual Financial Statements</p>
+            <p>Municipal Money</p>
 
           
         </td>
@@ -893,7 +991,48 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Proveedores de datos </th>
         <td>
           
-            <p>COJ Group Finance</p>
+            <p>National Treasury</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Método de cálculo </th>
+        <td>
+          
+            <p>Sum of Audited Actual Capital Expenditure for (0850 Museums, 0860 Galleries, 0870 Theatres, 0930 Nature Reserves, 1060 Monuments, 1070 Historic Buildings, 1080 Works of Art, 1090 Conservation Areas 1100 Other Heritage)</p>
 
           
         </td>
@@ -934,43 +1073,19 @@ data-event-label="Change to indicator.sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Comparabilidad/desviación de las normas internacionales </th>
+        <td>
           
-      
-      
-      
-        
+            <p>Domesticated Indicator</p>
+
           
-      
-      
-      
+        </td>
+        </tr>
         
-          
       
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
+  
       
       
       
@@ -981,10 +1096,25 @@ data-event-label="Change to indicator.sources tab"
       
       
       <tr>
+        <th scope="row">Datos actualizados por última vez </th>
+        <td>
+          
+            Jun 20, 2023
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
         <th scope="row">Metadatos actualizados por última vez </th>
         <td>
           
-            Jun 02, 2023
+            Jun 20, 2023
           
         </td>
         </tr>
@@ -1364,6 +1494,22 @@ data-event-label="Change to indicator.sources tab"
       
       
       
+      
+      <tr>
+        <th scope="row">Organización </th>
+        <td>
+          
+            <p>National Treasury</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
         
           
       
@@ -1379,13 +1525,27 @@ data-event-label="Change to indicator.sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Enlace a la fuente de datos </th>
+        <td>
           
-      
-      
-      
-        
+            
+            
+            
+            
+            
+              <a href="https://municipaldata.treasury.gov.za/table/capital_v2/?year=2021&municipalities=JHB&amountType=ADJB" target="_blank">
+                Link <span class="visuallyhidden">Se abre en una nueva ventana</span>
+              </a>
+            
+
           
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -1566,12 +1726,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/assets/js/sdg.js?v=20230619112843'></script>
+<script src='/assets/js/sdg.js?v=20230621101604'></script>
 
 
     
     
-    <script src="/assets/js/custom.js?v=20230619112843"></script><script>
+    <script src="/assets/js/custom.js?v=20230621101604"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
